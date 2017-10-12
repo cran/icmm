@@ -8,9 +8,9 @@ icmm(Y, X, event, b0.start, b.start, family = "gaussian",
      alpha = 0.5, maxiter = 100)
 }
 \arguments{
-  \item{Y}{a (n*1) numeric matrix of responses.}
-  \item{X}{a (n*p) numeric design matrix.}
-  \item{event}{a (n*1) numeric matrix of status for censored data: \code{0}=censored data, \code{1}=event at time. \code{event} is required when \code{family="cox"}.}
+  \item{Y}{an (n*1) numeric matrix of responses.}
+  \item{X}{an (n*p) numeric design matrix.}
+  \item{event}{an (n*1) numeric matrix of status for censored data: \code{0}=censored data, \code{1}=event at time. \code{event} is required when \code{family="cox"}.}
   \item{b0.start}{a starting value of intercept term (optional).}
   \item{b.start}{a (p*1) matrix of starting values for regression coefficients.}
   \item{family}{specification of the model. It can be one of these three models: \code{"gaussian"}, \code{"binomial"}, \code{"cox"}. The default is \code{family="gaussian"}.}
@@ -25,7 +25,7 @@ icmm(Y, X, event, b0.start, b.start, family = "gaussian",
   \item{coef}{a vector of model coefficients. The first element is an intercept term when specifying \code{family="gaussian"} or \code{family="binomial"}.}
   \item{iterations}{number of iterations of ICM/M.}
   \item{alpha}{a scalar value of \code{alpha}.}
-  \item{wpost}{a p-vector of local posterior probabilities or zeta.}
+  \item{postprob}{a p-vector of local posterior probabilities or zeta.}
 }
 \author{Vitara Pungpapong, Min Zhang, Dabao Zhang}
 \references{

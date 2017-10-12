@@ -6,15 +6,15 @@
 get.pseudodata.binomial(Y, X, beta0, beta, niter)
 }
 \arguments{
-  \item{Y}{a (n*1) numeric matrix of responses.}
-  \item{X}{a (n*p) numeric design matrix.}
+  \item{Y}{an (n*1) numeric matrix of responses.}
+  \item{X}{an (n*p) numeric design matrix.}
   \item{beta0}{a scalar value of intercept term.}
   \item{beta}{a (p*1) matrix of regression coefficients.}
   \item{niter}{number of iterations in ICM/M algorithm.}
 }
 \value{Return a list including elements
-  \item{z}{a (n*1) matrix of working responses}
-  \item{sigma2}{a (n*1) matrix of inverse of weights.}
+  \item{z}{an (n*1) matrix of working responses}
+  \item{sigma2}{an (n*1) matrix of inverse of weights.}
 }
 \author{Vitara Pungpapong, Min Zhang, Dabao Zhang}
 \examples{

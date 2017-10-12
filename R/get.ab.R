@@ -6,7 +6,7 @@ get.ab<-function(beta, structure, edgeind)
   {
     yy<-delta
     xx<-matrix(rep(0,p), ncol=1)
-    for (j in edgeind)
+    for (j in as.numeric(edgeind))
     {
       Nind<-as.numeric(unlist(strsplit(structure[which(structure[,1]==j),2], ";")))
       xx[j,1]<-sum(delta[Nind,1])

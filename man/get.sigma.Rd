@@ -6,8 +6,8 @@
 get.sigma(Y, X, beta, alpha)
 }
 \arguments{
-  \item{Y}{a (n*1) numeric matrix of responses.}
-  \item{X}{a (n*p) numeric design matrix.}
+  \item{Y}{an (n*1) numeric matrix of responses.}
+  \item{X}{an (n*p) numeric design matrix.}
   \item{beta}{a (p*1) matrix of regression coefficients.}
   \item{alpha}{a scalar value of hyperparmeter \code{alpha}.}
 }

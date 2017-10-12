@@ -274,8 +274,8 @@ icmm<-function(Y, X, event, b0.start, b.start, family="gaussian", ising.prior=FA
     output<-matrix(b[,1], ncol=1)
   }
 
-  result<-list(output, niter, alpha, zeta)
-  names(result) <- c("coef", "iterations", "alpha", "wpost")
+  result<-list(as.vector(output), niter, alpha, zeta)
+  names(result) <- c("coef", "iterations", "alpha", "postprob")
   return(result)
 }
 
