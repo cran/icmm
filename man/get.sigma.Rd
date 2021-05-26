@@ -23,5 +23,5 @@ alpha<-0.5
 data(initbetaGaussian)
 beta<-as.matrix(initbetaGaussian)
 # Obtain sigma
-sigma<-get.sigma(Y=Y, X=X, beta=beta, alpha=alpha)
+\donttest{sigma<-get.sigma(Y=Y, X=X, beta=beta, alpha=alpha)}
 }

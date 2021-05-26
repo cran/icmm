@@ -7,8 +7,8 @@
 \tabular{ll}{
 Package: \tab icmm\cr
 Type: \tab Package\cr
-Version: \tab 1.1\cr
-Date: \tab 2017-10-11\cr
+Version: \tab 1.2\cr
+Date: \tab 2021-5-12\cr
 License: \tab GPL-2\cr
 LazyLoad: \tab yes\cr
 }
@@ -19,6 +19,7 @@ Vitara Pungpapong, Min Zhang, Dabao Zhang
 Maintainer: Vitara Pungpapong <vitara@cbs.chula.ac.th>
 }
 \references{
-Pungpapong, V., Zhang, M. and Zhang, D. (2015). Selecting massive variables using an iterated conditional modes/medians algorithm. Electronic Journal of Statistics. 9:1243-1266. <doi:10.1214/15-EJS1034>.\cr
-Pungpapong, V., Zhang, M. and Zhang, D. (2017). Variable selection for high-dimensional generalized linear models using an iterated conditional modes/medians algorithm. Preprint <arXiv:1707.08298>.
+Pungpapong, V., Zhang, M. and Zhang, D. (2015). Selecting massive variables using an iterated conditional modes/medians algorithm. Electronic Journal of Statistics. 9:1243-1266. <doi:10.1214/15-EJS1034>.
+\cr
+Pungpapong, V., Zhang, M. and Zhang, D. (2020). Integrating Biological Knowledge Into Case-Control Analysis Through Iterated Conditional Modes/Medians Algorithm. Journal of Computational Biology. 27(7): 1171-1179. <doi:10.1089/cmb.2019.0319>.
 }

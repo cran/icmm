@@ -3,3 +3,5 @@
 exportPattern("^[^\\\\.]")
 importFrom("stats", "binomial", "dnorm", "glm", "pnorm", "qnorm", "sd", "weighted.mean")
 importFrom("EbayesThresh", "postmed", "beta.laplace")
+
+

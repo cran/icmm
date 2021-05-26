@@ -19,5 +19,5 @@ X<-as.matrix(simGaussian[,-1])
 data(initbetaGaussian)
 beta<-as.matrix(initbetaGaussian)
 # Estimate the mixing weight
-w<-get.wprior(beta)
+\donttest{w<-get.wprior(beta)}
 }

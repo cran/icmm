@@ -26,7 +26,7 @@ p<-dim(X)[2]
 data(initbetaBinomial)
 initbeta<-as.matrix(initbetaBinomial)
 # Get Pseudodata
-pseudodata<-get.pseudodata.binomial(Y=Y, X=X, beta0=0, beta=initbeta, niter=1)
-z<-pseudodata$z
-sigma<-sqrt(pseudodata$sigma2)
+\donttest{pseudodata<-get.pseudodata.binomial(Y=Y, X=X, beta0=0, beta=initbeta, niter=1)}
+\donttest{z<-pseudodata$z}
+\donttest{sigma<-sqrt(pseudodata$sigma2)}
 }

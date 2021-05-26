@@ -26,15 +26,15 @@ data(initbetaGaussian)
 beta<-as.matrix(initbetaGaussian)
 # Initiate all other parameters
 alpha<-0.5
-sigma<-get.sigma(Y=Y, X=X, beta=beta, alpha=alpha)
-hyperparam<-get.ab(beta, linearrelation, edgeind)
+\donttest{sigma<-get.sigma(Y=Y, X=X, beta=beta, alpha=alpha)}
+\donttest{hyperparam<-get.ab(beta, linearrelation, edgeind)}
 # Obtain regression coefficient
-j<-1
-Yres<-Y-X\%*\%beta+X[,j]*beta[j,1]
-sxy<-t(Yres)\%*\%X[,j]
-ssx<-sum(X[,j]^2)
-SS<-sqrt(n-1)*sxy/(sigma*ssx)
-wpost<-get.wpost(SS, beta, alpha, hyperparam, linearrelation, edgeind, j)
-beta[j,1]<-get.beta.ising(SS=SS, wpost=wpost, alpha=alpha, 
-           scaledfactor=sigma/sqrt(n-1))
+\donttest{j<-1}
+\donttest{Yres<-Y-X\%*\%beta+X[,j]*beta[j,1]}
+\donttest{sxy<-t(Yres)\%*\%X[,j]}
+\donttest{ssx<-sum(X[,j]^2)}
+\donttest{SS<-sqrt(n-1)*sxy/(sigma*ssx)}
+\donttest{wpost<-get.wpost(SS, beta, alpha, hyperparam, linearrelation, edgeind, j)}
+\donttest{beta[j,1]<-get.beta.ising(SS=SS, wpost=wpost, alpha=alpha, 
+           scaledfactor=sigma/sqrt(n-1))}
 }

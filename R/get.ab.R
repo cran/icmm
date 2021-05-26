@@ -16,6 +16,7 @@ get.ab<-function(beta, structure, edgeind)
     logitmodel<-glm(yy~xx, data=tmpdata, family=binomial)
     hyperparam<-rep(0,2)
     hyperparam<- -logitmodel$coefficients
+    hyperparam[is.na(hyperparam)]<-0
   }
   else
   {

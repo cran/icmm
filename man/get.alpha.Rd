@@ -25,7 +25,7 @@ alpha<-0.5
 # Estimate sigma
 e<-Y-X\%*\%beta
 nz<-sum(beta[,1]!=0)
-sigma<-get.sigma(Y=Y, X=X, beta=beta, alpha=alpha)
+\donttest{sigma<-get.sigma(Y=Y, X=X, beta=beta, alpha=alpha)}
 # Update alpha as the mode of its full conditional distribution function
-alpha<-get.alpha(beta=beta, scaledfactor=1/(sqrt(n-1)*sum(abs(beta))/sigma))
+\donttest{alpha<-get.alpha(beta=beta, scaledfactor=1/(sqrt(n-1)*sum(abs(beta))/sigma))}
 }

@@ -22,5 +22,5 @@ X<-as.matrix(simGaussian[,-1])
 data(initbetaGaussian)
 beta<-as.matrix(initbetaGaussian)
 edgeind<-sort(unique(linearrelation[,1]))
-hyperparameter<-get.ab(beta=beta, structure=linearrelation, edgeind=edgeind)
+\donttest{hyperparameter<-get.ab(beta=beta, structure=linearrelation, edgeind=edgeind)}
 }

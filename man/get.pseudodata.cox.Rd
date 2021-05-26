@@ -36,7 +36,7 @@ for(j in 1:ntime)
 data(initbetaCox)
 initbeta<-as.matrix(initbetaCox)
 # Get Pseudodata
-pseudodata<-get.pseudodata.cox(Y, X, event, initbeta, time, ntime, sumevent)
-z<-pseudodata$z
-sigma<-sqrt(pseudodata$sigma2)
+\donttest{pseudodata<-get.pseudodata.cox(Y, X, event, initbeta, time, ntime, sumevent)}
+\donttest{z<-pseudodata$z}
+\donttest{sigma<-sqrt(pseudodata$sigma2)}
 }

@@ -29,8 +29,8 @@ icmm(Y, X, event, b0.start, b.start, family = "gaussian",
 }
 \author{Vitara Pungpapong, Min Zhang, Dabao Zhang}
 \references{
-Pungpapong, V., Zhang, M. and Zhang, D. (2015). Selecting massive variables using an iterated conditional modes/medians algorithm. Electronic Journal of Statistics. 9:1243-1266. <doi:10.1214/15-EJS1034>. \cr
-Pungpapong, V., Zhang, M. and Zhang, D. (2017). Variable selection for high-dimensional generatlized linear models using an iterated conditional modes/medians algorithm. Preprint <arXiv:1707.08298>.
+Pungpapong, V., Zhang, M. and Zhang, D. (2015). Selecting massive variables using an iterated conditional modes/medians algorithm. Electronic Journal of Statistics. 9:1243-1266. <doi:10.1214/15-EJS1034>.\cr
+Pungpapong, V., Zhang, M. and Zhang, D. (2020). Integrating Biological Knowledge Into Case-Control Analysis Through Iterated Conditional Modes/Medians Algorithm. Journal of Computational Biology. 27(7): 1171-1179. <doi:10.1089/cmb.2019.0319>.
 }
 \seealso{
 \code{get.ab}, \code{get.alpha}, \code{get.beta}, \code{get.beta.ising}, \code{get.pseudodata.binomial}, \cr
@@ -45,22 +45,22 @@ X<-as.matrix(simGaussian[,-1])
 # Obtain initial values from lasso
 data(initbetaGaussian)
 initbeta<-as.matrix(initbetaGaussian)
-result<-icmm(Y=Y, X=X, b.start=initbeta, family="gaussian", 
-        ising.prior=FALSE, estalpha=FALSE, alpha=0.5, maxiter=100)
-result$coef
-result$iterations
-result$alpha
-result$wpost
+\donttest{result<-icmm(Y=Y, X=X, b.start=initbeta, family="gaussian", 
+        ising.prior=FALSE, estalpha=FALSE, alpha=0.5, maxiter=100)}
+\donttest{result$coef}
+\donttest{result$iterations}
+\donttest{result$alpha}
+\donttest{result$wpost}
 
 # With prior on structure among predictors
 data(linearrelation)
-result<-icmm(Y=Y, X=X, b.start=initbeta, family="gaussian", 
+\donttest{result<-icmm(Y=Y, X=X, b.start=initbeta, family="gaussian", 
         ising.prior=TRUE, structure=linearrelation, 
-        estalpha=FALSE, alpha=0.5, maxiter=100)
-result$coef
-result$iterations
-result$alpha
-result$wpost
+        estalpha=FALSE, alpha=0.5, maxiter=100)}
+\donttest{result$coef}
+\donttest{result$iterations}
+\donttest{result$alpha}
+\donttest{result$wpost}
 
 # Binary logistic regression model
 data(simBinomial)
@@ -70,13 +70,13 @@ p<-dim(X)[2]
 # Obtain initial values from lasso
 data(initbetaBinomial)
 initbeta<-as.matrix(initbetaBinomial)
-result<-icmm(Y=Y, X=X, b0.start=0, b.start=initbeta, family="binomial", 
+\donttest{result<-icmm(Y=Y, X=X, b0.start=0, b.start=initbeta, family="binomial", 
         ising.prior=TRUE, structure=linearrelation, estalpha=FALSE, 
-        alpha=0.5, maxiter=100)
-result$coef
-result$iterations
-result$alpha
-result$wpost
+        alpha=0.5, maxiter=100)}
+\donttest{result$coef}
+\donttest{result$iterations}
+\donttest{result$alpha}
+\donttest{result$wpost}
 
 # Cox's model
 data(simCox)
@@ -86,11 +86,11 @@ X<-as.matrix(simCox[,-(1:2)])
 # Obtain initial values from lasso
 data(initbetaCox)
 initbeta<-as.matrix(initbetaCox)
-result <- icmm(Y=Y, X=X, event=event, b.start=initbeta, family="cox",
+\donttest{result <- icmm(Y=Y, X=X, event=event, b.start=initbeta, family="cox",
           ising.prior=TRUE, structure=linearrelation, estalpha=FALSE,
-          alpha=0.5, maxiter=100)
-result$coef
-result$iterations
-result$alpha
-result$wpost
+          alpha=0.5, maxiter=100)}
+\donttest{result$coef}
+\donttest{result$iterations}
+\donttest{result$alpha}
+\donttest{result$wpost}
 }

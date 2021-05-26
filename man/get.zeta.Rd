@@ -22,19 +22,19 @@ n<-dim(X)[1]
 data(initbetaGaussian)
 initbeta<-as.matrix(initbetaGaussian)
 # Obtain the final output from ebvs
-output<-icmm(Y, X, b0.start=0, b.start=initbeta, family = "gaussian", 
-        ising.prior = FALSE, estalpha = FALSE, alpha = 0.5, maxiter = 100)
-b0<-output$coef[1]
-beta<-matrix(output$coef[-1], ncol=1)
+\donttest{output<-icmm(Y, X, b0.start=0, b.start=initbeta, family = "gaussian", 
+        ising.prior = FALSE, estalpha = FALSE, alpha = 0.5, maxiter = 100)}
+\donttest{b0<-output$coef[1]}
+\donttest{beta<-matrix(output$coef[-1], ncol=1)}
 # Get all parameters for function arguments
-w<-get.wprior(beta)
-alpha<-0.5
-sigma<-get.sigma(Y,X,beta,alpha)
+\donttest{w<-get.wprior(beta)}
+\donttest{alpha<-0.5}
+\donttest{sigma<-get.sigma(Y,X,beta,alpha)}
 # Estimate local posterior probability
-j<-1
-Yres<-Y-b0-X\%*\%beta+X[,j]*beta[j,1]
-sxy<-t(Yres)\%*\%X[,j]
-ssx<-sum(X[,j]^2)
-SS<-sqrt(n-1)*sxy/(sigma*ssx)
-zeta<-get.zeta(SS=SS, w=w, alpha=alpha)
+\donttest{j<-1}
+\donttest{Yres<-Y-b0-X\%*\%beta+X[,j]*beta[j,1]}
+\donttest{sxy<-t(Yres)\%*\%X[,j]}
+\donttest{ssx<-sum(X[,j]^2)}
+\donttest{SS<-sqrt(n-1)*sxy/(sigma*ssx)}
+\donttest{zeta<-get.zeta(SS=SS, w=w, alpha=alpha)}
 }
